@@ -1,10 +1,10 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
 // pages
-import Home from './pages/Home'
-import About from './pages/About'
-import Products from './pages/Products'
-import ProductDetails from './pages/ProductDetails'
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
@@ -18,15 +18,14 @@ function App() {
         </nav>
 
         <Routes>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/products/:id" component={ProductDetails} />
-          <Route path="/products" component={Products} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
-
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
